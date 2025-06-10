@@ -1,0 +1,384 @@
+$ TDB file converted from SGTE .dat file for Li-Mg-Sn system
+$ Generated on 2025-06-10
+$ Units: Energy in J/mol, Temperature in Kelvin
+
+$ Define elements with their reference states
+ELEMENT Li   BCC_A2    6.941   5.34E+00  0.0 !
+ELEMENT Mg   HCP_A3    24.305  1.74E+00  0.0 !
+ELEMENT Sn   BCT_A5    118.71  7.28E+00  0.0 !
+ELEMENT Va   VACUUM    0.0     0.0       0.0 !
+
+$ Define species
+SPECIES Li   Li1 !
+SPECIES Mg   Mg1 !
+SPECIES Sn   Sn1 !
+SPECIES Va   Va1 !
+
+$ Define Gibbs energy functions
+FUNCTION 0ZERO
+  298.15  0 ; 6000 Y !
+
+$ GHSERLI function from .dat file
+FUNCTION GHSERLI
+  298.15  -2529.59397 + 52.0165966*T - 9.307001*T*LN(T) +
+          8.47679895E-3*T^2 - 4.749001E-6*T^3 + 38239.4737/T ; 453.6
+  453.6   -133742.622 + 2521.00379*T - 407.000156*T*LN(T) +
+          5.3975369E-1*T^2 - 1.36488069E-4*T^3 + 8098918.25/T ; 500
+  500     -2166.10855 + 42.8485284*T - 7.46376099*T*LN(T) +
+          6.29353924E-4*T^2 - 1.04699375E-7*T^3 - 24471.0703/T ; 3000 Y !
+
+$ GHSERMG function from .dat file
+FUNCTION GHSERMG
+  298.15  -19998.425 + 343.3928*T - 62.5836*T*LN(T) +
+          1.1610899E-3*T^2 - 3.3309489E-6*T^3 + 188695.03/T ; 923
+  923     -33771.955 + 489.2835*T - 82*T*LN(T) +
+          2.4813384E+27*T^-9 ; 3000 Y !
+
+$ GHSERSN function from .dat file
+FUNCTION GHSERSN
+  298.15  -19021.312 + 293.37961*T - 61.802103*T*LN(T) +
+          1.2233509E-3*T^2 - 7.6308963E-6*T^3 + 44072.658/T ; 505.08
+  505.08  -13994.109 + 156.37641*T - 38.147706*T*LN(T) -
+          4.510086E-2*T^2 + 7.4597682E-6*T^3 - 148087.95/T ; 800
+  800     +6034.2352 + 9.5359584*T - 19.7396*T*LN(T) -
+          4.018745E-2*T^2 + 6.2694336E-6*T^3 - 2584235.2/T ; 3000
+  3000    -19734.606 + 332.17365*T - 68*T*LN(T) -
+          2.9414436E+25*T^-9 ; 6000 Y !
+
+$ GFCCSN function from .dat file
+FUNCTION GFCCSN
+  298.15  -910.257468 + 28.0988172*T - 6.18021033*T*LN(T) +
+          1.22335086E-4*T^2 - 7.63089627E-7*T^3 + 4407.26577/T ; 1000
+  1000    -407.53703 + 14.3984978*T - 3.81477055*T*LN(T) -
+          4.51008604E-3*T^2 + 7.45976816E-7*T^3 - 14808.7954/T ; 3000
+  3000    -1992.87498 + 43.7999734*T - 8.38862333*T*LN(T) ; 6000 Y !
+
+$ GBCCMG function from .dat file
+FUNCTION GBCCMG
+  298.15  -1258.92447 + 33.8373678*T - 6.25835999*T*LN(T) +
+          1.16108987E-4*T^2 - 3.33094885E-7*T^3 + 18869.5029/T ; 923
+  923     -2636.27747 + 48.426438*T - 8.2*T*LN(T) +
+          2.48133843E+27*T^-9 ; 3000 Y !
+
+$ BCC_087 function from .dat file
+FUNCTION BCC_087
+  298.15  +7409.1778 - 5.0191205*T ; 3000 Y !
+
+$ BCC_165 function from .dat file
+FUNCTION BCC_165
+  298.15  +10516.252 - 14.340344*T ; 3000 Y !
+
+$ HCP_075 function from .dat file
+FUNCTION HCP_075
+  298.15  -368.06883 + 4.7801147*T ; 3000 Y !
+
+$ HCP_132 function from .dat file
+FUNCTION HCP_132
+  298.15  +9321.2237 - 10.516252*T ; 6000 Y !
+
+$ G_A function from .dat file
+FUNCTION G_A
+  298.15  +1 ; 6000 Y !
+
+$ Comment: [2008Kan] 1cal for general use
+FUNCTION G_BT
+  298.15  +T ; 6000 Y !
+
+$ Comment: [2008Kan] 1T cal for general use
+FUNCTION GLi2Sn
+  298.15  -90000 + 0.1*T ; 6000 Y !
+
+$ Comment: [2012Jian]
+FUNCTION GMG2SN2
+  298.15  +35850.86 + 0.1*T ; 6000 Y !
+
+$ Comment: [2012Jian]
+FUNCTION GLi22Sn5
+  298.15  -301778.24 + 1322.68123*T - 235.655052*T*LN(T) +
+          1.87101274E-1*T^2 - 1.08293448E-4*T^3 + 863304.971/T ; 453.6
+  453.6   -299264.638 + 1254.17963*T - 223.827853*T*LN(T) +
+          1.63939169E-1*T^2 - 1.00748116E-4*T^3 + 767224.665/T ; 1000
+  1000    -306936.754 + 1137.37586*T - 192.27653*T*LN(T) -
+          2.19775574E-2*T^2 + 3.68908102E-6*T^3 + 1498661.57/T ; 2000
+  2000    -314863.443 + 1284.38323*T - 215.145793*T*LN(T) +
+          5.72872849E-4*T^2 - 4.08030593E-8*T^3 + 1572705.54/T ; 3000
+  3000    -314863.443 + 1284.38323*T - 215.145793*T*LN(T) +
+          5.72872849E-4*T^2 - 4.08030593E-8*T^3 + 1572705.54/T ; 6000 Y !
+
+$ GMg22Sn5 function from .dat file
+FUNCTION GMg22Sn5
+  298.15  -53509.0036 + 902.178705*T - 168.584971*T*LN(T) +
+          3.16607314E-3*T^2 - 1.11435356E-5*T^3 + 437165.392/T ; 505.08
+  505.08  -50995.4014 + 833.677108*T - 156.757773*T*LN(T) -
+          1.99960325E-2*T^2 - 3.59820339E-6*T^3 + 341085.086/T ; 923
+  923     -57526.2117 + 958.812333*T - 176.701606*T*LN(T) +
+          2.92133126E-3*T^2 - 7.35374076E-6*T^3 + 678513.384/T ; 3000
+  3000    -87827.9777 + 1279.77188*T - 219.417686*T*LN(T) +
+          3.66933556E-4*T^2 - 2.56532823E-8*T^3 + 263384.321/T ; 6000 Y !
+
+$ GLi2MgSn function from .dat file
+FUNCTION GLi2MgSn
+  298.15  -34818.35 + 1.8*T ; 6000 Y !
+
+$ Comment: [2010Jian]
+FUNCTION GLi2LiLi
+  298.15  0 ; 6000 Y !
+
+$ Comment: [2010Jian]
+FUNCTION GLi2LiSn
+  298.15  0 ; 6000 Y !
+
+$ Comment: [2010Jian]
+FUNCTION GLi2MgLi
+  298.15  0 ; 6000 Y !
+
+$ Comment: [2010Jian]
+FUNCTION GNEWLI
+  298.15  -2529.59297 + 52.0166066*T - 9.307*T*LN(T) +
+          8.47679995E-3*T^2 - 4.749E-6*T^3 + 38239.4837/T ; 453.6
+  453.6   -2878.32549 + 46.7073439*T - 7.87284895*T*LN(T) +
+          2.6039675E-5*T^2 - 1.85468451E-9*T^3 + 71486.6157/T ; 3000 Y !
+
+$ GNEWSN function from .dat file
+FUNCTION GNEWSN
+  298.15  -1902.13127 + 29.3416471*T - 6.18021033*T*LN(T) +
+          1.22335086E-4*T^2 - 7.63089627E-7*T^3 + 4407.26577/T ; 1000
+  1000    -1399.41084 + 15.6413277*T - 3.81477055*T*LN(T) -
+          4.51008604E-3*T^2 + 7.45976816E-7*T^3 - 14808.7954/T ; 2000
+  2000    -2984.74879 + 45.0428032*T - 8.38862333*T*LN(T) ; 6000 Y !
+
+$ GMg2Sn function from .dat file
+FUNCTION GMg2Sn
+  298.15  -24519.5576 + 87.8350049*T - 16.331501*T*LN(T) -
+          4.27786807E-3*T^2 + 7.97870459E-8*T^3 + 22930.2103/T ; 6000 Y !
+
+$ Define phases
+PHASE LIQUID % 1 1 !
+CONSTITUENT LIQUID : Li,Mg,Sn : !
+
+PHASE BCC_A2 % 2 1 3 !
+CONSTITUENT BCC_A2 : Li,Mg,Sn : Va : !
+
+PHASE BCT_A5 % 1 1 !
+CONSTITUENT BCT_A5 : Li,Mg,Sn : !
+
+PHASE HCP_A3 % 2 1 0.5 !
+CONSTITUENT HCP_A3 : Li,Mg,Sn : Va : !
+
+PHASE LI7SN2 % 2 7 2 !
+CONSTITUENT LI7SN2 : Li,Sn : Li,Sn : !
+
+PHASE MG2X % 2 2 1 !
+CONSTITUENT MG2X : Li,Mg : Sn : !
+
+PHASE ML22SN5 % 2 22 5 !
+CONSTITUENT ML22SN5 : Li,Mg : Sn : !
+
+PHASE LI2MGSN % 3 2 1 1 !
+CONSTITUENT LI2MGSN : Li : Li,Mg : Li,Sn : !
+
+$ Define parameters for Liquid phase
+PARAMETER G(LIQUID,Li;0)
+  298.15  +0.64536471 + 83.450343*T + 9.307*T*LN(T) -
+          1.69536E-2*T^2 - 7.6478967E-3*T^3 + 28.494/T ; 453.6
+  453.6   +0.64913833 + 83.582808*T - 14.725249*T*LN(T) +
+          8.7201942E-2*T^2 + 2.6767113E-2*T^3 - 91.714633/T ; 3000
+  3000    +0.56303992 + 81.017434*T + 7.46376*T*LN(T) -
+          1.2587098E-2*T^2 + 4.8942161E-3*T^3 + 0.62819025/T ; 6000 Y !
+
+PARAMETER G(LIQUID,Mg;0)
+  298.15  +1960.4077 + 99.207297*T + 62.5836*T*LN(T) -
+          2.3221797E-1*T^2 - 3.7739006E-3*T^3 + 19.986123/T +
+          8.04826E-18*T^6 ; 923
+  923     +1144.6814 + 82.367413*T + 8.2*T*LN(T) ; 3000 Y !
+
+PARAMETER G(LIQUID,Sn;0)
+  298.15  +1696.8751 + 155.9637*T + 61.802103*T*LN(T) -
+          2.4467017E-1*T^2 - 8.8145315E-4*T^3 + 45.785378/T -
+          1.4759326E-16*T^6 ; 505.08
+  505.08  +1697.2381 + 155.97633*T + 38.147706*T*LN(T) +
+          9.0201721E-2*T^2 + 2.9617591E-3*T^3 - 44.758609/T -
+          1.4759326E-16*T^6 ; 800
+  800     +1448.7027 + 148.87272*T + 19.7396*T*LN(T) +
+          8.03749E-2*T^2 + 5.1684704E-2*T^3 - 37.616601/T ; 3000
+  3000    +1720.2084 + 156.24304*T + 6.8*T*LN(T) ; 6000 Y !
+
+$ Comment: [2006PJS][2011Jian]
+PARAMETER L(LIQUID,Li,Mg;0)
+  298.15  -1300 + 0.94*T ; 6000 Y !
+
+$ Comment: [2006PJS][2011Jian]
+PARAMETER L(LIQUID,Li,Mg;1)
+  298.15  -2200 + 0.15*T ; 6000 Y !
+
+$ Comment: [2006PJS][2011Jian]
+PARAMETER L(LIQUID,Li,Mg;2)
+  298.15  +600 - 0.54*T ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER L(LIQUID,Li,Sn;0)
+  298.15  -6900 + 0.5*T ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER L(LIQUID,Li,Sn;1)
+  298.15  +7850 - 0.46*T ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER L(LIQUID,Li,Sn;2)
+  298.15  -1000 - 0.2*T ; 6000 Y !
+
+$ Comment: [2009Kan][2010Jian]
+PARAMETER L(LIQUID,Mg,Sn;0)
+  298.15  -36480 - 0.21*T ; 6000 Y !
+
+$ Comment: [2009Kan][2010Jian]
+PARAMETER L(LIQUID,Mg,Sn;1)
+  298.15  +8000 + 0.1*T ; 6000 Y !
+
+$ Magnetic parameters for Liquid phase
+PARAMETER TC(LIQUID,Li;0) 298.15  1314.41083 ; 6000 Y !
+PARAMETER BMAGN(LIQUID,Li;0) 298.15  0.547 ; 6000 Y !
+PARAMETER TC(LIQUID,Mg;0) 298.15  1406.97171 ; 6000 Y !
+PARAMETER BMAGN(LIQUID,Mg;0) 298.15  1.7 ; 6000 Y !
+PARAMETER TC(LIQUID,Sn;0) 298.15  1670.5 ; 6000 Y !
+PARAMETER BMAGN(LIQUID,Sn;0) 298.15  7.11 ; 6000 Y !
+
+$ Parameters for BCC_A2 phase
+PARAMETER G(BCC_A2,Li:Va;0) 298.15  +GHSERLI ; 6000 Y !
+PARAMETER G(BCC_A2,Mg:Va;0) 298.15  +BCC_087 + GHSERMG ; 6000 Y !
+PARAMETER G(BCC_A2,Sn:Va;0) 298.15  +BCC_165 + GNEWSN ; 6000 Y !
+
+$ Comment: Li-Mg COST-507
+PARAMETER L(BCC_A2,Li,Mg:Va;0) 298.15  -41000 + 16*T ; 6000 Y !
+
+$ Comment: Li-Mg COST-507
+PARAMETER L(BCC_A2,Li,Mg:Va;1) 298.15  -8000 + 3*T ; 6000 Y !
+
+$ Comment: Li-Mg COST-507
+PARAMETER L(BCC_A2,Li,Mg:Va;2) 298.15  +8000 - 0.1*T ; 6000 Y !
+
+$ Parameters for BCT_A5 phase
+PARAMETER G(BCT_A5,Sn;0) 298.15  +GNEWSN ; 6000 Y !
+PARAMETER G(BCT_A5,Mg;0) 298.15  +GHSERMG + 3585.4*G_A ; 6000 Y !
+PARAMETER G(BCT_A5,Li;0) 298.15  +GNEWLI + 3585.4*G_A ; 6000 Y !
+
+$ Parameters for HCP_A3 phase
+PARAMETER G(HCP_A3,Li:Va;0) 298.15  +HCP_075 + GNEWLI ; 6000 Y !
+PARAMETER G(HCP_A3,Mg:Va;0) 298.15  +GHSERMG ; 6000 Y !
+PARAMETER G(HCP_A3,Sn:Va;0) 298.15  +HCP_132 + GNEWSN ; 6000 Y !
+
+$ Comment: Li-Mg COST-507
+PARAMETER L(HCP_A3,Li,Mg:Va;0) 298.15  -16000 + 1.2*T ; 6000 Y !
+
+$ Comment: Li-Mg COST-507
+PARAMETER L(HCP_A3,Li,Mg:Va;1) 298.15  -9400 ; 6000 Y !
+
+$ Comment: Li-Mg COST-507
+PARAMETER L(HCP_A3,Li,Mg:Va;2) 298.15  +9800 ; 6000 Y !
+
+$ Comment: [2008Kan]
+PARAMETER L(HCP_A3,Mg,Sn:Va;0) 298.15  0 ; 6000 Y !
+
+$ Comment: [2008Kan]
+PARAMETER L(HCP_A3,Mg,Sn:Va;1) 298.15  +115000 ; 6000 Y !
+
+$ Parameters for LI7SN2 phase
+PARAMETER G(LI7SN2,Li:Li;0)
+  298.15  -2.14803528E-7 + 62.6386236*T + 83.763*T*LN(T) -
+          152.582399*T^2 - 6.88310707*T^3 + 256.446/T ; 453.6
+  453.6   -0.483457052 + 61.2987654*T + 70.8556405*T*LN(T) -
+          0.468714149*T^2 - 12.8675908*T^3 + 0.100152964/T ; 3000 Y !
+
+PARAMETER G(LI7SN2,Li:Sn;0)
+  298.15  -89940 + 2.1*T + 7*GNEWLI + 2*GNEWSN ; 6000 Y !
+
+PARAMETER G(LI7SN2,Sn:Li;0)
+  298.15  -5.08289898E-3 + 99.5281436*T + 61.8754723*T*LN(T) -
+          35.619891*T^2 - 2.14659656*T^3 + 89.0377643/T ; 453.6
+  453.6   -2.54147336E-3 + 99.5369815*T + 45.3173939*T*LN(T) +
+          29.2340048*T^2 + 5.43652008E-1*T^3 + 25.6569737/T ; 1000
+  1000    -1.09976326E-1 + 99.2392352*T + 42.4490918*T*LN(T) +
+          63.0370459*T^2 - 7.8623327E-1*T^3 - 31.3087701/T ; 2000
+  2000    -3.49574154 + 91.5987995*T + 74.4660612*T*LN(T) -
+          0.1041587*T^2 - 2.85944163*T^3 + 2.22562141E-2/T ; 3000 Y !
+
+PARAMETER G(LI7SN2,Sn:Sn;0)
+  298.15  -6.53509446E-3 + 110.068006*T + 55.6218929*T*LN(T) -
+          2.20203155*T^2 - 7.96307839E-1*T^3 + 41.2068399/T ; 1000
+  1000    -3.26754723E-3 + E0.079369*T^2 + 34.332935*T*LN(T) +
+          81.1815488*T^2 + 2.66598317*T^3 - 40.2827481/T ; 2000
+  2000    -4.35639425 + 100.255952*T + 75.4976099*T*LN(T) ; 3000 Y !
+
+PARAMETER L(LI7SN2,Li,Sn:Li;0) 298.15  0 ; 6000 Y !
+PARAMETER L(LI7SN2,Li,Sn:Sn;0) 298.15  0 ; 6000 Y !
+PARAMETER L(LI7SN2,Li:Li,Sn;0) 298.15  0 ; 6000 Y !
+PARAMETER L(LI7SN2,Sn:Li,Sn;0) 298.15  +62000 + 18*T ; 6000 Y !
+
+$ Parameters for MG2X phase
+$ Comment: [2010Jian]
+PARAMETER G(MG2X,Li:Sn;0)
+  298.15  +2*GNEWLI + GNEWSN + GLi2Sn ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER G(MG2X,Mg:Sn;0)
+  298.15  +GMg2Sn + G_A ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER L(MG2X,Li,Mg:Sn;0)
+  298.15  -29000 ; 6000 Y !
+
+$ Parameters for ML22SN5 phase
+$ Comment: [2010Jian]
+PARAMETER G(ML22SN500,Li:Sn;0) 298.15  +GLi22Sn5 ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER G(ML22SN5,Mg:Sn;0) 298.15  +GMg22Sn5 ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER L(ML22SN5,Li,Mg:Sn;0) 298.15  -80000 ; 6000 Y !
+
+$ Parameters for LI2MGSN phase
+$ Comment: [2010Jian]
+PARAMETER G(LI2MGSN,Li:Mg:Sn;0)
+  298.15  +2*GNEWLI + GHSERMG + GNEWSN + GLi2MgSn ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER G(LI2MGSN,Li:Mg:Li;0)
+  298.15  +2*GNEWLI + 2*GHSERMG + GLi2MgLi ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER G(LI2MGSN,Li:Li:Sn;0)
+  298.15  +3*GNEWLI + GNEWSN + GLi2LiSn ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER G(LI2MGSN,Li:Li:Li;0)
+  298.15  +4*GNEWLI + GLi2LiLi ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER L(LI2MGSN,Li:Li,Mg:Sn;0)
+  298.15  -440000 + 12.1*T ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER L(LI2MGSN,Li:Li,Mg:Sn;1)
+  298.15  -410000 + 11*T ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER L(LI2MGSN,Li:Li,Mg:Li;0)
+  298.15  -340000 + 15.1*T ; 6000 Y !
+
+$ Comment: [2010Jian]
+PARAMETER L(LI2MGSN,Li:Li,Mg:Li;1)
+  298.15  -310000 + 14*T ; 6000 Y !
+
+$ Comment: [2006PJS] Li-Mg system assessment
+$ Comment: [2008Kan] Mg-Sn system assessment
+$ Comment: [2009Kan] Mg-Sn system assessment
+$ Comment: [2010Jian] Li-Sn and Li-Mg-Sn system assessment
+$ Comment: [2011Jian] Li-Mg-Sn system assessment
+$ Comment: [2012Jian] Li-Sn intermetallic assessment
+$ Comment: Li-Sn interaction parameters modified as per [2010Jian]
+$ Comment: Original: (-9400-1.5*T) + (1000-2.4*T) + (-1000+2.4*T)
+$ Comment: Modified: (-6900+0.5*T) + (+7850-0.46*T) + (-1000-0.2*T)
+$ Comment: Temperature limits capped at 6000 K (originally 9600 K in some functions)
+
+ENDF !
