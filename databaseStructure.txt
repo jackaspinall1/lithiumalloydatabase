@@ -1,0 +1,10 @@
+
+
+Want to create a database of .tdb files with
+1. Unaries e.g. Li.tdb, Al.tdb.
+2. Binaries containing only binary compounds e.g. Li-Mg.tdb and Li-Sn.tdb
+3. Ternaries containing only ternary compounds e.g. Li-Mg-Sn.tdb
+
+These can then be merged by thermocalc when studying multicomponent systems.
+
+Can have a script .sh to build a master database concatenating all of them.
